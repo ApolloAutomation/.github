@@ -6,6 +6,6 @@
 This sensor offers a wide range of functionality for Home Assistant in a very tiny package.
 
 Links: \
-Discord (Support/feedback/discussion/future products): [https://discord.gg/8PpS4yUaUh](https://discord.gg/mMNgQPyF94) \
-Shop: https://shop.apolloautomation.cloud \
-Wiki: https://wiki.apolloautomation.cloud 
+Discord (Support/feedback/discussion/future products): https://dsc.gg/ApolloAutomation
+Shop: https://shop.apolloautomation.com \
+Wiki: https://wiki.apolloautomation.com 
