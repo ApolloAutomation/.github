@@ -1,0 +1,41 @@
+# Org-wide release-drafter config. Product repos without their own
+# .github/release-drafter.yml inherit this file (release-drafter v7 falls
+# back to ApolloAutomation/.github on the default branch). A per-repo copy
+# overrides it completely. The include-labels below come from the PR
+# template checkboxes, which Workflows label-check.yml turns into labels.
+
+name-template: 'Release v$NEXT_PATCH_VERSION'
+tag-template: "$RESOLVED_VERSION"
+change-template: "- #$NUMBER $TITLE @$AUTHOR"
+sort-direction: ascending
+category-template: '**$TITLE**'
+
+categories:
+  - title: "🚨 Breaking changes"
+    labels:
+      - "breaking-change"
+  - title: "✨ New features"
+    labels:
+      - "new-feature"
+  - title: "🐛 Bug fixes"
+    labels:
+      - "bugfix"
+  - title: "⬆️ Dependency updates"
+    collapse-after: 5
+    labels:
+      - "dependency-update"
+
+
+include-labels:
+  - "bugfix"
+  - "new-feature"
+  - "breaking-change"
+
+no-changes-template: '- No changes'
+
+# The shared build workflow appends a Full Changelog compare link to the
+# release body (release-drafter cannot render 4-part version tags).
+template: |
+  **What's Changed**
+
+  $CHANGES
